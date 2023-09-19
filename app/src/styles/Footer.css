@@ -1,0 +1,121 @@
+footer{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: fit-content;
+}
+.top{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color:#262626;
+    width: 100%; height: 100px;
+}
+
+.mail input{
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.left,.right{width: 30vw;height: 10px;position: relative;}
+.left::before,.right::before{
+    content: "";
+position: absolute;
+top: 50%;
+width: 100%;
+border-bottom: 1px solid #858594;
+}
+.profile{
+    flex: 0.6;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    position: relative;
+}
+
+.bottom{
+    width: 100%;
+    height: fit-content;
+    background-color:#404040;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0 10px 0;
+}
+
+.icon{width: 80px;height: 80px; border-radius: 50%;padding: 1px; background-color: #fff; margin: 3px;}
+.icon:hover{
+    cursor: pointer;
+    color: #f68b1e;
+}
+.github{color:#000;}
+.linkedin{color:#0e76a8;}
+.instagram{color:rgba(214, 41, 118,0.7);}
+.email{color:#4285f4;}
+.footer-links{
+width: fit-content;
+height: fit-content;
+display: flex;
+flex-direction: row;
+align-items:flex-start;
+justify-content: center;
+}
+
+.need-help,.about,.make-money{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+}
+.need-help > ul > li,.about > ul > li,
+.make-money >ul >li {
+    list-style: none;
+}
+ul{
+    width: 300px;
+    height: fit-content;
+    padding: 2px;
+}
+ul > li > p {
+    color:#fff;
+    font-size: 14px;
+    width: fit-content;
+}
+ul > li > p:hover{text-decoration: underline;
+    cursor: pointer;
+}
+.copyright{
+    width: 90%;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#fff;
+    padding:20px 0 10px 0;
+     font-size: 13px;
+}
+.footer-links{
+    border-bottom: 1px solid #858594;
+    padding-bottom: 10px;
+}
+@media screen and (max-width:960px),(max-width:479px) {
+    .footer-links{
+        flex-direction: column;
+    }
+    ul{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .need-help,.about,.make-money,li{
+        text-align: center;
+    }  
+    .copyright{
+        font-size:10px;
+    }
+}

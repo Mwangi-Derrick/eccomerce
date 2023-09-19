@@ -1,0 +1,105 @@
+.carousel-container{
+    width: 700px;
+    height: 400px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.desktop-carousel {
+    width: 100%;
+    height: 100%;
+    position:relative;
+}
+.mobile-carousel{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type:x mandatory;
+  background-color: #fff;
+  padding:10px 5px 10px 5px;
+}
+.mobile-slide{
+  width: 80%;
+  height: 100%;
+  margin: 0 5px 0 5px;
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+}
+.mobile-slide > img {
+  display:block;
+  width: 100%;
+  height:100%;
+  border-radius:5px;
+}
+.left-button,.right-button{
+  position: absolute;
+  width: 90px;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+  cursor: pointer;
+}
+.left-button > button,.right-button > button{
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0,0.8);
+  color:#fff;
+  cursor: pointer;
+}
+.left-button{left: 0;}
+.right-button{right: 0;}
+  .inactive-slide{
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    transition:500ms opacity ease-out ;
+    transition-delay: 400ms;
+  position: absolute;
+  top: 0;
+  }
+  /*for making the next/current slide active*/
+  .active-slide {
+    opacity: 1;
+    z-index: 10;
+    transition-delay: 0ms;
+  }
+  .active-slide>img,.inactive-slide>img{border-radius: 5px;}
+  .active-slide > img{
+    width: 100%;
+    height: 100%;
+  }
+  .dot-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom:30px;
+    left: 42.5%;
+    height: 15px;
+    width: 15%;
+  }
+  .dot{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color:#818185;
+    cursor: pointer;
+  }
+  @media screen and (max-width:768px),(max-width:479px){
+    .left-button,.right-button,.dot-container{
+      display:none;
+    }
+    .carousel-container{
+      width: 100vw;
+      height: 200px;
+    }
+    
+  }

@@ -1,0 +1,14 @@
+.header{
+    background-color: #fff;
+    width: 100vw;
+    height: 70px;
+    position:fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    box-shadow:0 1px 20px 2px #e0e0e1;
+}
+@media screen and (max-width:960px) ,(max-width:479px) {
+   .header{height:fit-content;padding: 0 0 10px 0;}
+}

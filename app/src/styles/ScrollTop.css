@@ -1,0 +1,42 @@
+@media screen and (min-width:960px) {
+    .buttonStyles{
+        width: 40px;
+        height: 40px;
+        background-Color: #fff;
+        border-Radius: 50%;
+        outline:1px rgb(58, 56, 54) solid;
+         position: relative;
+         right: -45vw;
+         bottom: 1vh;
+    }
+    .buttonStyles:hover{
+        background-color: rgba(107, 103, 103, 0.1);
+    }
+    .back-to-top{
+        display: none;
+        font-size: 12px;
+    }
+}
+@media screen and (max-width:960px),(max-width:479px){
+    .buttonStyles{
+        width: 100vw;
+        height: fit-content;
+        padding: 0 0 5px 0;
+        background-color:rgba(54, 55, 56, 0.932);
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color:#fff;
+    }
+        .buttonStyles:focus,.buttonStyles:active {
+            -webkit-tap-highlight-color: transparent;
+            -moz-tap-highlight-color: transparent;
+            outline: none; /* Optional: Remove the focus outline */
+          }
+    
+    .back-to-top{font-size: 10px;
+    color:#fff;}
+    
+}

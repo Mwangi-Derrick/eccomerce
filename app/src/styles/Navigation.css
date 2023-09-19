@@ -1,0 +1,121 @@
+.account,.help,.cart-link{
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor:pointer;
+    padding:5px;
+}
+.account:hover,.help:hover,.cart-link:hover{
+color: #f68b1e;
+}
+.cart-link{
+    color: #1c1c20;
+    text-decoration: none;
+    position: relative;
+}
+
+.quantity-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left:15px;
+    width: 16px;
+    height: 16px;
+  
+}
+.quantity{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:16px;
+    height: 16px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 11px;
+    border-radius: 50%;
+    background-color: #f68b1e;
+    border:1px solid #fff;
+}
+
+.navigation{
+    width: fit-content;
+    height: 35px;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    margin:0 0 0 10px;
+}
+.icon-description{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-label{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.account{
+    position: relative;
+    
+}
+.sign-in{
+    width: 90%;
+    height: 40px;
+    color:#fff;
+    border-radius:5px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f68b1e;
+}
+.account-drop-down{
+    position: absolute;
+    top: calc(80%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow:2px -1px 20px 2px #e0e0e1;
+    box-shadow: -2px 1px 20px 2px #e0e0e1;
+      border-radius: 5px;
+    width: 200px;
+    height: fit-content;
+}
+ .none{
+    display:none;
+}
+.account-drop-down > p {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.account-drop-down > p:hover{
+    background-color: #e0e0e1;
+}
+.account-drop-down >p > svg{
+margin-right: 10px;
+}
+.account-drop-down >:nth-child(2){
+    border-top: 1px solid #e0e0e1;
+}
+@media screen and (max-width:960px),(max-width:479px){
+    .icon-description,.help,.search-btn{display: none;}
+    .navigation{width: 60px;}
+    .cart-link:active{
+        -webkit-tap-highlight-color:transparent;
+        background-color: rgba(246, 139, 30,0.5);;
+        border-radius: 80%;
+    }
+}
